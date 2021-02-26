@@ -5,7 +5,7 @@
   $usuario = $_POST['usuario'];
   $contrasena = $_POST['contrasena'];
 
-  $validar_login = mysqli_query($link,"SELECT * FROM usuario WHERE usuario='$usuario' and contrasena='$contrasena'");
+  $validar_login = mysqli_query($link,"SELECT * FROM Usuario WHERE usuario='".$usuario."' and contrasena='".$contrasena."'");
 
   if (mysqli_num_rows($validar_login) > 0) {
     header("location: menu/menuPrincipal.html");
